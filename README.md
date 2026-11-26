@@ -29,7 +29,7 @@ Evergreen is a procedurally generated forest that runs entirely in your browser.
 
 ## Quick start
 
-Requires Go 1.23+ (and Node 18+ only for the smoke test).
+Requires Go 1.24+ (and Node 18+ only for the smoke test).
 
 ```bash
 git clone https://github.com/0x5t4l1n/evergreen && cd evergreen

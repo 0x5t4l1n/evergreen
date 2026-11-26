@@ -12,7 +12,7 @@ make serve      # builds dist/ and serves http://127.0.0.1:8080/
 make smoke      # browser smoke test (needs Chrome or Chromium)
 ```
 
-Go 1.23 or newer is required. The only non-Go dependency is `playwright-core`, used by the smoke test.
+Go 1.24 or newer is required. The only non-Go dependency is `playwright-core`, used by the smoke test.
 
 ## Ground rules
 

@@ -1,5 +1,6 @@
 GO      ?= go
 GOROOT  := $(shell $(GO) env GOROOT)
+WASMEXEC := $(firstword $(wildcard $(GOROOT)/lib/wasm/wasm_exec.js $(GOROOT)/misc/wasm/wasm_exec.js))
 DIST    ?= dist
 BASE    ?=
 PORT    ?= 8080
@@ -8,7 +9,7 @@ SEED    ?= 42
 .PHONY: setup dev build wasm svg test lint clean serve smoke fmt activity
 
 setup: ## install smoke-test dependencies and sync wasm_exec.js with the toolchain
-	cp "$(GOROOT)/lib/wasm/wasm_exec.js" web/wasm_exec.js
+	cp "$(WASMEXEC)" web/wasm_exec.js
 	cd tests/smoke && npm install --no-audit --no-fund
 	$(GO) mod download
 
@@ -22,7 +23,7 @@ svg: ## regenerate the README SVG
 
 build: wasm svg ## full static site in dist/
 	cp web/index.html web/style.css web/loader.js web/ui.js web/icon.svg dist/
-	cp "$(GOROOT)/lib/wasm/wasm_exec.js" dist/wasm_exec.js
+	cp "$(WASMEXEC)" dist/wasm_exec.js
 	mkdir -p dist/assets dist/data
 	cp assets/evergreen.svg assets/evergreen-night.svg assets/logo.svg dist/assets/
 	if [ -f web/data/activity.json ]; then cp web/data/activity.json dist/data/activity.json; else echo '{"version":1,"generatedAt":"1970-01-01T00:00:00Z","users":{}}' > dist/data/activity.json; fi
