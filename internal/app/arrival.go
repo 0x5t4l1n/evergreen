@@ -21,7 +21,7 @@ func ArrivalPoint(z zones.Zone) (x, zz, yaw float64) {
 	case zones.Treehouse:
 		return z.X + 22, z.Z + 14, math.Pi + 0.5
 	case zones.Ruins:
-		return z.X, z.Z + 40, -math.Pi / 2
+		return z.X - 34, z.Z, 0
 	case zones.Observatory:
 		return z.X + 15, z.Z + 8, 0.4
 	case zones.Station:
