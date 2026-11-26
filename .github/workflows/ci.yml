@@ -1,0 +1,52 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+      - name: Formatting
+        run: test -z "$(gofmt -l cmd internal shaders tests)" || (gofmt -l cmd internal shaders tests; exit 1)
+      - name: Vet (native and WebAssembly)
+        run: |
+          go vet -composites=false ./...
+          GOOS=js GOARCH=wasm go vet -composites=false ./internal/renderer ./internal/app ./internal/audio ./cmd/evergreen
+      - name: Unit and integration tests
+        run: go test -race ./...
+      - name: Build WebAssembly
+        run: make wasm
+      - name: Generate README SVGs
+        run: make svg
+  smoke:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          cache: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build site
+        run: make build
+      - name: Install smoke-test dependencies
+        run: cd tests/smoke && npm install --no-audit --no-fund
+      - name: Browser smoke test
+        run: cd tests/smoke && CHROME_PATH="$(which google-chrome)" node smoke.mjs ../../dist
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: smoke-screenshots
+          path: tests/smoke/artifacts
+          if-no-files-found: ignore

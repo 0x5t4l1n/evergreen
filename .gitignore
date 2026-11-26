@@ -1,0 +1,8 @@
+dist/
+tests/smoke/node_modules/
+tests/smoke/artifacts/
+*.test
+*.out
+.DS_Store
+.env
+.env.*

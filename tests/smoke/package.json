@@ -1,0 +1,13 @@
+{
+  "name": "evergreen-smoke",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Browser smoke tests for Evergreen (Playwright driving Chromium)",
+  "type": "module",
+  "scripts": {
+    "test": "node smoke.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "1.52.0"
+  }
+}
