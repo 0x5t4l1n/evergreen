@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-27T08:47:41.603028086Z",
+  "users": {
+    "0x5t4l1n": {
+      "login": "0x5t4l1n",
+      "repos": [
+        {
+          "name": "AURHub",
+          "stars": 20,
+          "language": "JavaScript",
+          "releases": 1,
+          "size": 2964
+        },
+        {
+          "name": "CVE",
+          "stars": 18,
+          "language": "Python",
+          "releases": 0,
+          "size": 71
+        },
+        {
+          "name": "hunting",
+          "stars": 5,
+          "language": "Python",
+          "releases": 0,
+          "size": 317
+        },
+        {
+          "name": "0x5t4l1n",
+          "stars": 0,
+          "language": "",
+          "releases": 0,
+          "size": 267
+        },
+        {
+          "name": "alpineflow-action",
+          "stars": 0,
+          "language": "",
+          "releases": 1,
+          "size": 2
+        },
+        {
+          "name": "alpineflow",
+          "stars": 0,
+          "language": "Go",
+          "releases": 0,
+          "size": 191
+        },
+        {
+          "name": "evergreen",
+          "stars": 0,
+          "language": "Go",
+          "releases": 1,
+          "size": 3220
+        },
+        {
+          "name": "YaliOS",
+          "stars": 0,
+          "language": "Rust",
+          "releases": 0,
+          "size": 32
+        },
+        {
+          "name": "CVE-2026-9506",
+          "stars": 0,
+          "language": "PHP",
+          "releases": 0,
+          "size": 9
+        },
+        {
+          "name": "CVE-2026-19412",
+          "stars": 0,
+          "language": "",
+          "releases": 0,
+          "size": 2
+        },
+        {
+          "name": "CVE-2026-30081",
+          "stars": 0,
+          "language": "",
+          "releases": 0,
+          "size": 1
+        },
+        {
+          "name": "CVE-2026-41039",
+          "stars": 0,
+          "language": "",
+          "releases": 0,
+          "size": 2
+        },
+        {
+          "name": "CVE-2026-41037",
+          "stars": 0,
+          "language": "Python",
+          "releases": 0,
+          "size": 3
+        },
+        {
+          "name": "CVE-2026-29905",
+          "stars": 0,
+          "language": "Python",
+          "releases": 0,
+          "size": 3
+        },
+        {
+          "name": "CVE-2026-55062",
+          "stars": 0,
+          "language": "",
+          "releases": 0,
+          "size": 1
+        },
+        {
+          "name": "CVE-2026-55061",
+          "stars": 0,
+          "language": "",
+          "releases": 0,
+          "size": 2
+        },
+        {
+          "name": "CVE-2026-45152",
+          "stars": 0,
+          "language": "",
+          "releases": 0,
+          "size": 2
+        },
+        {
+          "name": "CVE-2026-42290",
+          "stars": 0,
+          "language": "Shell",
+          "releases": 0,
+          "size": 3
+        },
+        {
+          "name": "CVE-2026-59924",
+          "stars": 0,
+          "language": "Python",
+          "releases": 0,
+          "size": 3
+        },
+        {
+          "name": "CVE-2026-117425",
+          "stars": 0,
+          "language": "Python",
+          "releases": 0,
+          "size": 5
+        },
+        {
+          "name": "mkdocs-fix",
+          "stars": 0,
+          "language": "Python",
+          "releases": 0,
+          "size": 9
+        },
+        {
+          "name": "Attackgraph",
+          "stars": 0,
+          "language": "Python",
+          "releases": 0,
+          "size": 4896
+        },
+        {
+          "name": "OS",
+          "stars": 0,
+          "language": "Shell",
+          "releases": 0,
+          "size": 2925
+        }
+      ],
+      "commits": 0,
+      "pullRequests": 456,
+      "stars": 43,
+      "releases": 3,
+      "contributions": 100
+    }
+  }
+}
